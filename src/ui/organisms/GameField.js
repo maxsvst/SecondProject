@@ -21,16 +21,6 @@ const startColorsArray = [
 ];
 
 export default function GameField() {
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      let t = array[i];
-      array[i] = array[j];
-      array[j] = t;
-    }
-    return array;
-  }
-
   const [colorsArray, setColorsArray] = useState(startColorsArray);
   const [colorsToCompare, setColorsToCompare] = useState([]);
   const [round, setRound] = useState(1);
@@ -74,6 +64,16 @@ export default function GameField() {
       .map((color) => (color.isOpen = false));
     setColorsArray([...shuffle(startColorsArray)]);
     setRound(1);
+  }
+
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let t = array[i];
+      array[i] = array[j];
+      array[j] = t;
+    }
+    return array;
   }
 
   function createSquares(array) {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { buttonStyle, squaresStyle } from "../../styles/styles";
 import Square from "../molecules/Square";
 
 const startColorsArray = [
@@ -94,57 +95,13 @@ export default function GameField() {
   }
 
   return (
-    <div
-      className="flex 
-                 flex-col 
-                 items-center"
-    >
-      <div
-        className="h-full 
-                   flex 
-                   items-center 
-                   justify-center"
-      >
-        <div
-          className="flex 
-                     flex-wrap 
-                     items-center 
-                     justify-center 
-                     basis-[30%]
-                     my-16 
-                     border 
-                     rounded-2xl 
-                   border-[#696969]"
-        >
-          {createSquares(colorsArray)}
-        </div>
+    <div className="flex flex-col items-center">
+      <div className="h-full flex items-center justify-center">
+        <div className={squaresStyle}>{createSquares(colorsArray)}</div>
       </div>
-      <div className="flex 
-                      flex-col 
-                      items-center">
-        <span
-          className="font-sans 
-                     font-bold"
-        >
-          {`Текущий раунд: ${round}`}
-        </span>
-        <button
-          onClick={startNewGame}
-          className="px-3
-                     mt-3 
-                     py-3
-                     rounded-2xl 
-                     border
-                   border-[#696969]
-                     transition
-                     ease-linear
-                     delay-150
-                   hover:bg-[#696969]
-                     font-sans 
-                     font-normal 
-                   text-[#696969]
-                   hover:text-white"
-        >
+      <div className="flex flex-col items-center">
+        <span className="font-sans font-bold">{`Текущий раунд: ${round}`}</span>
+        <button onClick={startNewGame} className={buttonStyle}>
           Начать новую игру
         </button>
       </div>

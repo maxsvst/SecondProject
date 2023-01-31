@@ -72,7 +72,7 @@ export default function GameField() {
     startColorsArray
       .filter((color) => color.isOpen === true)
       .map((color) => (color.isOpen = false));
-    setColorsArray([...shuffle(startColorsArray)]); // Что будет без spread?
+    setColorsArray([...shuffle(startColorsArray)]);
     setRound(1);
   }
 

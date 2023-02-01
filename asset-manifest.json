@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/secondProject/static/css/main.f4d277bf.css",
+    "main.js": "/secondProject/static/js/main.efc8fe37.js",
+    "static/media/Montserrat-Bold.ttf": "/secondProject/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
+    "static/media/Montserrat-Regular.ttf": "/secondProject/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
+    "index.html": "/secondProject/index.html",
+    "main.f4d277bf.css.map": "/secondProject/static/css/main.f4d277bf.css.map",
+    "main.efc8fe37.js.map": "/secondProject/static/js/main.efc8fe37.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4d277bf.css",
+    "static/js/main.efc8fe37.js"
+  ]
+}

@@ -1,11 +1,7 @@
 import GameField from "./ui/organisms/GameField";
 
 function App() {
-  return (
-    <div>
-      <GameField />
-    </div>
-  );
+  return <GameField />;
 }
 
 export default App;

@@ -8,6 +8,8 @@ export default function GameField() {
   const [colorToCompare, setColorToCompare] = useState([]);
   const [round, setRound] = useState(1);
 
+  const isColorsArrayEmpty = colorsArray.length === 0 ? "invisible " : "visible ";
+  
   useEffect(() => {
     setColorsArray(shuffle(startColorsArray));
   }, []);
@@ -77,8 +79,8 @@ export default function GameField() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="h-full flex items-center justify-center">
-        <div className={squaresStyle}>
+      <div className="h-full flex items-center justify-center px-4">
+        <div className={isColorsArrayEmpty + squaresStyle}>
           <Squares />
         </div>
       </div>
